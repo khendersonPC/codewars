@@ -1,0 +1,28 @@
+public class JadenCase {
+
+  public String toJadenCase(String phrase) {
+    String finalStr="";
+    
+    if(phrase==null){
+      return null;
+    }
+    if(phrase.length()==0){
+      return null;
+    }
+    
+      finalStr+=phrase.substring(0,1).toUpperCase();
+      for(int i =1; i<phrase.length();i++){
+        if(phrase.substring(i, i+1).equals(" ")){
+          finalStr+=" " + phrase.substring(i+1, i+2).toUpperCase();
+          i++;
+        }
+        else{
+          finalStr+=phrase.substring(i, i+1);
+        }
+      }
+    return finalStr;
+
+      
+    
+    }
+  }
