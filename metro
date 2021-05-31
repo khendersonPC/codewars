@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+
+class Metro {
+
+  public static int countPassengers(ArrayList<int[]> stops) {
+    int totalOn=0;
+    int totalOff=0;
+    
+    for(int[] stop : stops){
+      
+        totalOn+=stop[0];
+        totalOff+=stop[1];
+      
+      }
+    if(totalOn-totalOff>=0){
+      return (totalOn-totalOff);
+    }
+    else{
+      return 0;
+    }
+    
+  }
